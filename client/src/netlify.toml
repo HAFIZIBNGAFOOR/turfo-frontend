@@ -3,5 +3,18 @@
   to = "/index.html"
   status = 200
   
-[build]
-command = "ng build"
+[[plugins]]
+  package = "netlify-plugin-node"
+  [plugins.inputs]
+    node-version = "18"
+
+[[build.plugins]]
+  package = "@netlify/plugin-angular"
+  [build.plugins.inputs]
+    command = "ng build"
+    node-version = "18"
+    args = "--prod"
+
+[[build]]
+  command = "npm install && ng build"
+  publish = "/opt/build/repo/dist/client"
