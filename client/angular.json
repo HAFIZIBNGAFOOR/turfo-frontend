@@ -22,7 +22,8 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/_redirects"
             ],
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
@@ -54,7 +55,7 @@
               "namedChunks": true
             }
           },
-          "defaultConfiguration": "production"
+          "defaultConfiguration": "production" 
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -97,6 +98,6 @@
     }
   },
   "cli": {
-    "analytics": false
+    "analytics": "bfcd9a24-084d-420d-87d7-988b51e19647"
   }
 }
