@@ -1,4 +1,1 @@
-/pass-through /index.html    200
-  
-/en/* /en/404.html 404
-/de/* /de/404.html 404
+/* /index.html 200 
