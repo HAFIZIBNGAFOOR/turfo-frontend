@@ -23,7 +23,7 @@ mat-toolbar {
 }
 .icon-size {
   transform: scale(2);
-  color: #374957;
+  color: #004658;
 }
 button{
   text-decoration: none;
@@ -46,10 +46,10 @@ li:hover{
   color: #2FB563;
 }
 .play-icon:hover{
-  color: #000000;
+  color: #004658;
 }
 .menu-icon{
-  color: black;
+  color: #004658;
 }
 a{
   text-decoration: none;

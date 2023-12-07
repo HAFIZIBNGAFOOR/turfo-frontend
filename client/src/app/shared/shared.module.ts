@@ -37,6 +37,7 @@ import { ConfirmationDiologComponent } from './generics-components/confirmation-
 import { NavigationMapComponent } from './generics-components/navigation-map/navigation-map.component';
 import { BallSpinnerComponent } from './generics-components/ball-spinner/ball-spinner.component';
 import { DashboardComponent } from './generics-components/dashboard/dashboard.component';
+import { FooterComponent } from './generics-components/footer/footer.component';
 
 
 
@@ -61,6 +62,7 @@ import { DashboardComponent } from './generics-components/dashboard/dashboard.co
     NavigationMapComponent,
     BallSpinnerComponent,
     DashboardComponent,
+    FooterComponent,
     // SpinnerComponent,
   ],
   imports: [
@@ -100,7 +102,8 @@ import { DashboardComponent } from './generics-components/dashboard/dashboard.co
     ConfirmationDiologComponent,
     NavigationMapComponent,
     BallSpinnerComponent,
-    DashboardComponent
+    DashboardComponent,
+    FooterComponent
   ]
 })
 export class SharedModule {}

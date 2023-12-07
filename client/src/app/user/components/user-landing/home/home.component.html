@@ -1,4 +1,4 @@
-<section id="blog" [ngStyle]="{'margin-top': '50px', 'margin-bottom': '50px'}">
+<!-- <section id="blog" [ngStyle]="{'margin-top': '50px', 'margin-bottom': '50px'}">
     <div class="container">
 		      <div class="blog-section blog-heading mat-typography" fxLayout="column" fxLayoutAlign="center center">
 		            <div>
@@ -170,4 +170,46 @@
 	  				<button class="customNextBtn" mat-raised-button color="accent">Next</button>
 				</div>
     </div>
-</section>
+</section> -->
+
+
+
+
+<!-- landing-page.component.html -->
+
+<div class="hero_area">
+	<!-- Angular Material banner -->
+	<mat-card>
+	  <mat-card-header>
+		<mat-card-title>Welcome to Our Blog</mat-card-title>
+		<mat-card-subtitle>Explore the latest articles and updates</mat-card-subtitle>
+	  </mat-card-header>
+	  <div>
+		<img  src="http://res.cloudinary.com/dtjwgoss4/image/upload/v1700130559/turfImages/nnzchudx2hzjlaokmdqq.jpg" alt="Banner Image" class="banner-image">
+	  </div>
+	</mat-card>
+  
+	<!-- Blog Section -->
+	<section id="blog" [ngStyle]="{'margin-top': '50px', 'margin-bottom': '50px'}">
+	  <div class="container">
+		<div class="blog-section blog-heading mat-typography" fxLayout="column" fxLayoutAlign="center center">
+		  <div>
+			<h2 [ngStyle]="{'margin-bottom': '15px'}">Blog</h2>
+		  </div>
+		  <div>
+			<h3 [ngStyle]="{'font-size': '18px'}" [ngStyle]="{'font-size': '22px'}">
+			  Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.
+			</h3>
+		  </div>
+		</div>
+		<div class="owl-carousel owl-theme">
+		  <!-- Your existing blog card items go here -->
+		</div>
+		<div fxLayout="row" fxLayoutAlign="center center">
+		  <button class="customPrevBtn" mat-raised-button color="primary">Prev</button>
+		  <button class="customNextBtn" mat-raised-button color="accent">Next</button>
+		</div>
+	  </div>
+	</section>
+  </div>
+  
