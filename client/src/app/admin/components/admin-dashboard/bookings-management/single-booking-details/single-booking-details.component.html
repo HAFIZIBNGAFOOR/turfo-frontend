@@ -42,8 +42,11 @@
             </div>
         </div>
             <div class="text-center m-3">
-                    <button disabled mat-raised-button class="bg-sucess">                     
+                    <button *ngIf="bookingDetails.bookingStatus !=='Confirmed'" disabled mat-raised-button class="bg-sucess">                     
                         Booking Status : <span [ngClass]="{'cancel' : bookingDetails.bookingStatus =='Cancelled'}" class="text-success" > {{ bookingDetails.bookingStatus }}</span>
+                    </button>
+                    <button (click)="cancelDiolog()" *ngIf="bookingDetails.bookingStatus =='Confirmed'"  mat-raised-button class="bg-danger">
+                        Cancel Booking
                     </button>
             </div>
       </mat-card>

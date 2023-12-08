@@ -12,8 +12,8 @@
         </button>
       </a>
       <a mat-list-item >
-        <button class="nav-caption" routerLinkActive="active" mat-button [routerLink]="isAdmin?'/turf-owner/manage-slots':'/user-profile/bookings' " >
-          {{isAdmin?'ADD SLOT':'MY BOOKINGS'}}
+        <button class="nav-caption" routerLinkActive="active" mat-button [routerLink]="isAdmin?'/turf-owner/bookings':'/user-profile/bookings' " >
+          {{isAdmin?'BOOKINGS':'MY BOOKINGS'}}
         </button>  
       </a>
       <a mat-list-item >
@@ -60,8 +60,8 @@
              </button>
           </li>
           <li>
-              <button mat-button routerLinkActive="active" [routerLink]="isAdmin?'/turf-owner/manage-slots':'/user-profile/bookings' " >
-                  {{isAdmin?'ADD SLOT':'MY BOOKINGS'}}
+              <button mat-button routerLinkActive="active" [routerLink]="isAdmin?'/turf-owner/bookings':'/user-profile/bookings' " >
+                  {{isAdmin?'BOOKINGS':'MY BOOKINGS'}}
                </button>
           </li>
           <li>

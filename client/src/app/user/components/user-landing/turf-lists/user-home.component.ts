@@ -14,6 +14,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./user-home.component.css']
 })
 export class UserHomeComponent {
+  isInitialized:boolean=false
   turfSubscription!:Subscription
   sportsSubscription!:Subscription
 
@@ -41,7 +42,7 @@ export class UserHomeComponent {
       this.turfSubscription= this.service.getTurfDetails().subscribe({
         next:((val:any)=>{
           console.log(val);
-          
+          this.isInitialized = true
           this.turfDetails = val.turfs
         }),
         error:(err)=>console.log(err,'get turf types')

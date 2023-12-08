@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ColumnType } from '../../../../shared/models/shared-model';
 import { TurfAdminService } from '../../../turf-admin-service/turf-admin.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-turf-management',
@@ -27,7 +28,7 @@ export class TurfManagementComponent {
     ],
     rowsPerPage:'3'
   };
-  constructor(private turfAdminService:TurfAdminService){}
+  constructor(private turfAdminService:TurfAdminService , private router:Router){}
 
   ngOnInit(): void {
     this.turfLists ={
@@ -42,7 +43,7 @@ export class TurfManagementComponent {
           sportsType:turf.sportsType,
           turfPrice:turf.turfPrice,
           turfStatus:turf.status,
-          actions:'Edit',
+          actions:'Add Slots',
           action2:turf.status=='active'?'Block':'Unblock',
           color:'primary',
           secondColor:turf.status=='active'?'red':'green',
@@ -83,5 +84,8 @@ export class TurfManagementComponent {
       }
     })
     
+  }
+  getTurfId(id:any){
+    this.router.navigate([`/turf-owner/manage-slots/add-slots/`,id])
   }
 }

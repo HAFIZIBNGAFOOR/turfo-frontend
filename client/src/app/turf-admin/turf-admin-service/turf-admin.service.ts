@@ -56,10 +56,15 @@ export class TurfAdminService {
   getTurfAdminProfile():Observable<any>{
       return this.http.get<any>(`${this.turfAdminUrl.TurfOwnerAPIEndPoint}/getProfile`)
   }
-  updateProfile(data:any){
+  updateProfile(data:any):Observable<any>{
     return this.http.patch(`${this.turfAdminUrl.TurfOwnerAPIEndPoint}/update-profile`,data)
   }
-
+  getBookingsforSingleTurf(turfId:string){
+    return this.http.post(`${this.turfAdminUrl.TurfOwnerAPIEndPoint}/turfs-booking`,{turfId})
+  }
+  cancelBooking(bookingId:string){
+    return this.http.post(`${this.turfAdminUrl.TurfOwnerAPIEndPoint}/cancel-booking`,{bookingId})
+  }
   handleError(err:HttpErrorResponse): Observable<any>{
     console.log(err,' error ');
     return throwError(()=>{new Error('Something bad happened; please try again later.')});

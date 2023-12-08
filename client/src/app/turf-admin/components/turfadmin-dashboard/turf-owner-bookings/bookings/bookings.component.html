@@ -1,0 +1,9 @@
+<h1 class="text-center text-success"> Booking Details </h1>
+<ng-container *ngIf="!bookingsDetails">
+<p>No bookings found on this turf </p>
+</ng-container>
+<ng-container *ngIf="bookingsDetails && bookingsDetails.length>1">
+    <app-table [dataSource]="bookingsDetails" [tableConfig]="columnDatas" (tableAction)="getToCancelbooking($event)"></app-table>
+</ng-container>
+    
+

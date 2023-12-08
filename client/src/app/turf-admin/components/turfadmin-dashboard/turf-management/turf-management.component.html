@@ -7,7 +7,7 @@
             </div>
         </ng-container>
         <ng-template #elseTemplate>
-            <app-table [dataSource]="turfLists" [actionType]="turfTable" [tableConfig]="columnDatas" (tableAction2)="getBlockAction($event)"> </app-table>
+            <app-table [dataSource]="turfLists" [actionType]="turfTable" [tableConfig]="columnDatas" (tableAction)="getTurfId($event)" (tableAction2)="getBlockAction($event)"> </app-table>
         </ng-template>   
 </div>
 

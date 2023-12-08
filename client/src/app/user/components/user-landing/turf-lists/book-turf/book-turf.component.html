@@ -1,9 +1,16 @@
 <div class=" main-div">
-    <mat-card class="example-card " *ngIf="initialized" >
+    <div *ngIf="!initialized" class="full-size">
+      <div class="box">
+          <div class="shadow"></div>
+          <div class="gravity">
+            <div class="ball"></div>
+          </div>
+      </div>
+    </div>
+    <mat-card class="example-card" *ngIf="initialized" >
       <mat-card-header class="text-center">
         <mat-card-title>{{ turfData.turfName | uppercase}}</mat-card-title>
       </mat-card-header>
-
       <mat-card-content >
       <div class="card-image-container mb-1 ">
         <img mat-card-image [src]="turfData.turfImages[0]" alt="Turf Images">
@@ -21,9 +28,6 @@
         </div>
       </div>
        <h3 class="text-black"> <b>Price per hour:{{ turfData.turfPrice }} </b>  </h3>
-
-        <!-- <h4 class="text-black"> <b>Price:{{turfData.turfPrice}} </b></h4> -->
-        <!-- <p>Facilities : {{ turfData.facilities }} </p> -->
       </mat-card-content>
       <mat-form-field class="example-full-width">
         <input readonly="true" [value]="selectedDate" [(ngModel)]="selectedDate" (dateInput)="getDate($event)" matInput placeholder="Select a Date" [min]="startDate"  [matDatepicker]="picker">
@@ -31,13 +35,13 @@
         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
-    <div class="row" *ngIf="submitted && times.length<=0">
+    <div class="row" *ngIf=" times.length<=0">
       <mat-error class="text-center">  No slots available for selected date, Select another Date </mat-error>
       </div>
       <mat-card-actions class="center-button" >
-        <button class="text-white half-width mb-3 " mat-raised-button  (click)="onSubmit()"> Select Slot</button>
+        <button class="text-white half-width mb-3 " mat-raised-button > Select Slot</button>
       </mat-card-actions>
-      <div class="buttons" *ngIf="submitted && times && times.length>0">
+      <div class="buttons" *ngIf="times && times.length>0">
         <mat-form-field class="example-full-width">
           <h4>Enter Your Start Time</h4> 
           <mat-select [(ngModel)]="startTime" (ngModelChange)="onStartTimeChange($event)">

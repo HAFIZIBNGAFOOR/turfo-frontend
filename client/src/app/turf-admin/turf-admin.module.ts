@@ -17,19 +17,18 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import {MatCardModule} from '@angular/material/card';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material/select';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatExpansionModule} from '@angular/material/expansion';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 
 import { AddTurfComponent } from './components/turfadmin-dashboard/turf-management/add-turf/add-turf.component';
@@ -38,11 +37,12 @@ import { TurfDetailsComponent } from '../admin/components/admin-dashboard/turf-a
 import { AddSlotComponent } from './components/turfadmin-dashboard/turf-management/add-slot/add-slot.component';
 import { SlotsComponent } from './components/turfadmin-dashboard/turf-management/add-slot/slots/slots.component'
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { Constants } from '../config/constants';
 import { TurfAdminService } from './turf-admin-service/turf-admin.service';
 import { TurfHomeComponent } from './components/turfadmin-dashboard/turf-home/turf-home.component';
 import { TurfProfileComponent } from './components/turfadmin-dashboard/turf-profile/turf-profile.component';
 import { TurfWalletComponent } from './components/turfadmin-dashboard/turf-wallet/turf-wallet.component';
+import { TurfOwnerBookingsComponent } from './components/turfadmin-dashboard/turf-owner-bookings/turf-owner-bookings.component';
+import { BookingsComponent } from './components/turfadmin-dashboard/turf-owner-bookings/bookings/bookings.component';
 
 
 
@@ -70,6 +70,8 @@ import { TurfWalletComponent } from './components/turfadmin-dashboard/turf-walle
     TurfHomeComponent,
     TurfProfileComponent,
     TurfWalletComponent,
+    TurfOwnerBookingsComponent,
+    BookingsComponent,
 
   ],
   imports: [

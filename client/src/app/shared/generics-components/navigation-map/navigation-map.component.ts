@@ -53,7 +53,6 @@ export class NavigationMapComponent {
                         this.routeGeometry = res.routes[0].geometry
                         this.distance =(res.routes[0].legs[0].distance)/1000;
                         const routeCoordinates = polyline.decode(this.routeGeometry).map((point) => [point[1], point[0]]) as Position[]
-                        console.log(routeCoordinates,' this is route coordinates ');
                           this.map.addSource('route', {
                             type: 'geojson',
                             data: {
@@ -71,12 +70,13 @@ export class NavigationMapComponent {
                             source:'route',
                             layout: {
                               'line-join': 'round',
-                              'line-cap': 'round',
+                              'line-cap': 'round', // Use 'round' line cap for rounded dots
                             },
                             paint: {
                               'line-color': 'black',
-                              'line-width': 4,
-                              'line-opacity': 0.75,
+                              'line-width': 6,
+                              'line-opacity': 0.80,
+                              'line-dasharray': [0.1, 2],
                             },
                           });
                           const bounds = new mapboxgl.LngLatBounds()
@@ -85,7 +85,7 @@ export class NavigationMapComponent {
                               new mapboxgl.Marker().setLngLat(routeCoordinates[0]).addTo(this.map);
                               new mapboxgl.Marker().setLngLat(routeCoordinates[routeCoordinates.length-1]).addTo(this.map)
                               new mapboxgl.Popup().setLngLat(routeCoordinates[routeCoordinates.length-1]).setHTML(`<h3>${this.turfName }</h3>`).addTo(this.map);
-                              new mapboxgl.Popup().setLngLat(routeCoordinates[0]).setHTML(`<h3>'Your Location'</h3>`).addTo(this.map);
+                              new mapboxgl.Popup().setLngLat(routeCoordinates[0]).setHTML(`<h3>Your Location</h3>`).addTo(this.map);
                     }
                   })
                 })

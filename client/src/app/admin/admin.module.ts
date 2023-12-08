@@ -35,6 +35,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { Constants } from '../config/constants';
 import { AdminRoutingModule } from './admin-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+
+
 import { AdminService } from './admin-service/admin-service.service';
 import { TurfManagementComponent } from './components/admin-dashboard/turf-management/turf-management.component';
 import { RouterModule } from '@angular/router';
@@ -86,7 +91,10 @@ import { RouterModule } from '@angular/router';
     MatListModule,
     MatDialogModule,
     MatSnackBarModule,
-    MatIconModule
+    MatIconModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
+    MatProgressSpinnerModule
   ]
 })
 export class AdminModule { }

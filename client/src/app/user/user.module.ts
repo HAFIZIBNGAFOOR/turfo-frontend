@@ -34,6 +34,8 @@ import { MatTableModule } from '@angular/material/table';
 import { RouterLinkActive } from '@angular/router';
 import {MatStepperModule} from '@angular/material/stepper';
 import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
 
 
 import { UserProfileComponent } from './components/user-landing/user-profile/user-profile.component';
@@ -49,6 +51,7 @@ import { UserService } from './service/user.service';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatProgressSpinner } from '@angular/material/progress-spinner';
 
 
 
@@ -111,6 +114,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatTableModule,
     MatPaginatorModule, 
     MatStepperModule,
+    MatProgressSpinnerModule,
     MatExpansionModule,
     UserRoutingModule,
     RouterLinkActive,

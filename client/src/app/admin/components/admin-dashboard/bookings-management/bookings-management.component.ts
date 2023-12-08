@@ -20,6 +20,7 @@ export class BookingsManagementComponent {
       {title:'Status',dataProperty:'bookingStatus',sortable:false,filterable:false},
       {title:'Price',dataProperty:'price',sortable:false,filterable:false},
       {title:'Action',dataProperty:'actions',sortable:false,filterable:false},
+
     ],
     rowActions:[
       {label:"Action", dataProperty:"isBlocked",actionIdtoReturn:''},

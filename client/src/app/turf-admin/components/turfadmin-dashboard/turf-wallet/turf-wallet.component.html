@@ -12,23 +12,22 @@
                         <mat-accordion>
                             <mat-expansion-panel hideToggle>
                               <mat-expansion-panel-header>
-                                <mat-panel-title>
-                                  {{wallet}}
+                                <mat-panel-title [class.text-success]="wallet.transaction === 'credit'" [class.text-danger]="wallet.transaction === 'debit'">
+                                 {{ wallet.transaction |uppercase}}
                                 </mat-panel-title>
                                 <mat-panel-description>
-                                  This is a summary of the content
+                                  <p> Amount : {{wallet.amount}}  </p> 
                                 </mat-panel-description>
                               </mat-expansion-panel-header>
-                              <p>This is the primary content of the panel.</p>
+                              <p>Rs.{{wallet.amount}} {{wallet.walletType}} for turf {{wallet.turfName}} On {{wallet.date|date:'dd:MM:yyyy'}}  </p>
                             </mat-expansion-panel>
                         </mat-accordion>
                     </div>
                 </div>
                 <div class="m-3" *ngIf=" !walletDetails ||walletDetails.length<=0">
                        <p class="text-primary">  No Wallet history found</p>
-                    </div>
+                  </div>
                 </div>
-
             </div>
         </div>
     </div>

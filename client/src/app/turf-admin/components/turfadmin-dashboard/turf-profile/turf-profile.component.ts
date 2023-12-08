@@ -54,8 +54,18 @@ export class TurfProfileComponent {
     })
   }
   updateProfile(data:any){
-    this.turfAdminService.updateProfile(data).subscribe({})
-    console.log(data,' this is data ');
-    
+    this.turfAdminService.updateProfile(data).subscribe({
+      next:res=>{
+        this.turfAdminData = {
+          name:res.profile.turfAdminName,
+          email:res.profile.email,
+          phone:res.profile.phone,
+          location:null,
+          age:res.profile.age,
+          _id:res.profile._id,
+          wallet:res.profile.wallet
+        }
+      }
+    })
   }
 }

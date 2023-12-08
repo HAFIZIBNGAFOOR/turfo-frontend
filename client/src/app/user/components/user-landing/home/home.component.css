@@ -1,24 +1,24 @@
-#scroll-item{
+#scroll-item {
 	cursor: all-scroll;
 }
 
-.blog-section{
-  text-align: center;
+.blog-section {
+	text-align: center;
 }
 
-.blog-heading{
-  padding-bottom: 30px;
+.blog-heading {
+	padding-bottom: 30px;
 }
 
-.blog-heading h2{
-  font-size: 32px;
+.blog-heading h2 {
+	font-size: 32px;
 }
 
-.blog-heading h3{
-  font-size: 22px;
+.blog-heading h3 {
+	font-size: 22px;
 }
 
-.mat-card{
+.mat-card {
 	padding: 0;
 }
 
@@ -30,22 +30,87 @@
 	padding: 10px;
 }
 
-.mat-card-content a { 
-	color: inherit; 
+.mat-card-content a {
+	color: inherit;
 }
 
 .item {
 	margin-top: 15px;
-    margin-bottom: 15px;
+	margin-bottom: 15px;
 }
 
-.owl-nav .my-but{
+.owl-nav .my-but {
 	background-color: red;
 }
 
 
 .banner-image {
-	width: 100%; /* Make the image take the full width of its container */
-	height: auto; /* Maintain the aspect ratio */
-	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
-  }
+	width: 100%;
+	/* Make the image take the full width of its container */
+	height: auto;
+	/* Maintain the aspect ratio */
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	/* Add a subtle box shadow */
+}
+
+
+#background-video {
+	width: 100vw;
+	height: auto;
+	object-fit: cover;
+	position: relative;
+	left: 0;
+	z-index: -1;
+}
+
+.video-heading h1 {
+	font-size: 4rem;
+	color:white ;
+	font-family: Trebuchet MS;
+	font-weight: bold;
+	text-align: left;
+	line-height: 4rem;
+
+}
+
+.video-heading{
+	max-width: 450px;
+	margin-left: 3rem;
+	position: absolute;
+	top: 18%;
+	z-index: 10;
+}
+.video-heading button{
+	background-color: #2FB563;
+	color: white;
+	font-family: Trebuchet MS;
+	font-weight: bold;
+	text-align: left;
+}
+
+.second-image{
+	width: 50%;
+	height: 50%;
+}
+
+.navigation-section{
+	height: fit-content;
+}
+
+.left-video video{
+	height: auto;
+	width: 50vw;
+}
+.paragraph{ 
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+	justify-content: center;
+	background-color: #2FB563;
+	color: white;
+	height: auto;
+	margin-bottom: 6px
+}
+.paragraph p{
+	line-height: 1.2rem;
+}

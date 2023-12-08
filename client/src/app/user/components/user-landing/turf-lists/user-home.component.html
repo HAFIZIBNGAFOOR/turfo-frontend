@@ -51,9 +51,21 @@
       </ng-container>
       <ng-template #elseTemplate>
           <div class="row">
-              <div class="card-container mat-grid-tile column-lg-6"    *ngFor="let turf of turfDetails">  
-                  <app-turf-card class="turf-card"  [turfData]="turf" (submitTurf)="getTurfData($event)"></app-turf-card>
+              <div *ngIf="!isInitialized"> 
+                <div class="full-container">
+                    <div class="box">
+                        <div class="shadow"></div>
+                        <div class="gravity">
+                          <div class="ball"></div>
+                      </div>
+                  </div>
+                </div>
               </div>
+                <ng-container *ngIf="isInitialized">
+                  <div class="card-container mat-grid-tile column-lg-6" *ngFor="let turf of turfDetails">  
+                    <app-turf-card class="turf-card"  [turfData]="turf" (submitTurf)="getTurfData($event)"></app-turf-card>
+                  </div>
+                </ng-container>
           </div>
       </ng-template>
       

@@ -31,6 +31,7 @@ ngOnInit(): void {
   this.displayedColumns = this.tableConfig.columns
   this.displayColumnName =[...this.displayedColumns.map(col=>col.dataProperty)];
   this.actions = this.tableConfig.rowActions;
+  
 }
 setDataSource(data:any){
   this._dataSource = new MatTableDataSource<any>(data);
@@ -38,7 +39,7 @@ setDataSource(data:any){
 
 }
 performAction(user:any){
-  this.tableAction.emit(user);
+  this.tableAction.emit(user.turfID);
 }
 rowClass(row:any):string{
   if( row &&row.color) return `${row.color}-class`

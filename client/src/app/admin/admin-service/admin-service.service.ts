@@ -58,6 +58,9 @@ blockOrunblockTurf(turfId:string):Observable<iTurfData[]>{
 getSingleBooking(bookingId:string):Observable<iTurfData>{
     return this.http.get<iTurfData>(`${this.adminUrl.AdminAPIEndPoint}/single-booking/${bookingId}`)
 }
+cancelBooking(id:string){
+    return this.http.post(`${this.adminUrl.AdminAPIEndPoint}/cancel-booking`,{id})
+}
 logout(){
     localStorage.removeItem('AdminToken');
     this.router.navigate(['admin/login']);

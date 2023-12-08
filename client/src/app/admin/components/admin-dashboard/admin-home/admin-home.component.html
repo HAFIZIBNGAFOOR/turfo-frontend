@@ -17,7 +17,31 @@
 </div> -->
 
 <!-- <app-dashboard [weeklySales]="weeklySales" [monthySales]="monthySales" [annualSales]="annualSales" [chartData]="chartData" [pieChartData]="pieChartData" [chartLabel]="label" [pieChartLabel]="pieLabel" > </app-dashboard> -->
-<app-dashboard
+<div *ngIf="!isInitialized">
+    <div class="no-data w-100 h-100">
+        <mat-spinner></mat-spinner>
+    </div>
+</div>
+<div *ngIf="isInitialized">
+    <!-- <mat-input-container>
+        <input matInput
+               [(ngModel)]="modelName"
+               [matDatepicker]="datePickerRef"
+               placeholder="Select from Date">
+        <button matSuffix [matDatepickerToggle]="datePickerRef">  </button>
+    </mat-input-container>
+    <mat-datepicker
+            #datePickerRef
+            (selectedChanged)=""></mat-datepicker> -->
+            <mat-label>Enter a date range</mat-label>
+            <mat-date-range-input [rangePicker]="picker">
+              <input  matStartDate placeholder="Start date">
+              <input  matEndDate placeholder="End date">
+            </mat-date-range-input>
+            <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+    <app-dashboard
      [annualSales]="annualSales" 
      [chartData]="chartData" 
      [pieChartData]="pieChartData" 
@@ -28,3 +52,4 @@
       [chartText]="chartText"
       [pieChartText]="pieText"
     ></app-dashboard>
+</div>

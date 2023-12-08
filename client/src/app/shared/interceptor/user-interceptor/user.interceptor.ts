@@ -33,8 +33,7 @@ export class InterceptorInterceptor implements HttpInterceptor {
         tap({
             next:(event)=>{
               if(event instanceof HttpResponse){
-                console.log(event.status,' got response');
-                alertify.success('response is successfull '+event.status)
+                
               }
             },
             error:(error:HttpErrorResponse)=>{

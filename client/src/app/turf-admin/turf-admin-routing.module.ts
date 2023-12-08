@@ -12,6 +12,8 @@ import { SlotsComponent } from './components/turfadmin-dashboard/turf-management
 import { TurfHomeComponent } from './components/turfadmin-dashboard/turf-home/turf-home.component';
 import { TurfProfileComponent } from './components/turfadmin-dashboard/turf-profile/turf-profile.component';
 import { TurfWalletComponent } from './components/turfadmin-dashboard/turf-wallet/turf-wallet.component';
+import { TurfOwnerBookingsComponent } from './components/turfadmin-dashboard/turf-owner-bookings/turf-owner-bookings.component';
+import { BookingsComponent } from './components/turfadmin-dashboard/turf-owner-bookings/bookings/bookings.component';
 
 const routes: Routes = [
     {path:'',component:TurfadminDashboardComponent,
@@ -25,6 +27,8 @@ const routes: Routes = [
         {path:'turf-management',component:TurfManagementComponent,canActivate:[TurfAdminGuard]},
         {path:'turf-management/add-turf',component:AddTurfComponent,canActivate:[TurfAdminGuard]},
         {path:'manage-slots',component:AddSlotComponent,canActivate:[TurfAdminGuard]},
+        {path:'bookings',component:TurfOwnerBookingsComponent,canActivate:[TurfAdminGuard]},
+        {path:'single-bookings/:turfId',component:BookingsComponent,canActivate:[TurfAdminGuard]},
         {path:'manage-slots/add-slots/:turfId',component:SlotsComponent,canActivate:[TurfAdminGuard]},
         {path:'dashboard',redirectTo:'turf-owner'},
       ]
