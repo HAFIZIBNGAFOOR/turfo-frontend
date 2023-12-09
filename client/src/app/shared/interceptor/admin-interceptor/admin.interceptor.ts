@@ -36,7 +36,7 @@ export class AdminInterceptor implements HttpInterceptor {
               }
             },
             error:(error:HttpErrorResponse)=>{
-              if(error.status==500 || error.status==404){
+              if(error.status==500 ){
                 alertify.error(`Something went wrong!
                   Please try again  ${error.status}`)
               }

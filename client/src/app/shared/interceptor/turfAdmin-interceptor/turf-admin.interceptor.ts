@@ -34,7 +34,7 @@ export class TurfAdminInterceptor implements HttpInterceptor {
               if(event instanceof HttpResponse){}
             },
             error:(error:HttpErrorResponse)=>{
-              if(error.status ==500 || error.status ==404){
+              if(error.status ==500 ){
                 alertify.error(`Something went wrong!
                 Please try again  ${error.status}`)
               }
