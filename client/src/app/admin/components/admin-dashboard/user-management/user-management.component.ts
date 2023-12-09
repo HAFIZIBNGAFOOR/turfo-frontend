@@ -39,7 +39,7 @@ export class UserManagementComponent {
             userName:user.userName,
             email:user.email,
             phone:user.phone,
-            _id:user._id,
+            turfID:user._id,
             isBlocked:user.isBlocked?'Blocked':'Active',
             actions:user.isBlocked ? 'Unblock' :'Block',
             color:user.isBlocked?'green':'red'
@@ -51,17 +51,20 @@ export class UserManagementComponent {
     )
     this.initialized = true
   }
-  getAction(user:UsersType){
-    this.adminService.blockOrUnblockUser(user._id).subscribe(
+  getAction(user:any){
+    console.log(user);
+    
+    this.adminService.blockOrUnblockUser(user).subscribe(
       { 
         next:(res:any)=>{
           const usertype:any = res.users.map((user:any)=>({
             userName:user.userName,
             email:user.email,
             phone:user.phone,
-            _id:user._id,
+            turfID:user._id,
             isBlocked:user.isBlocked ?'Blocked':'Active',
-            actions:user.isBlocked ?'Unblock' :'Block'
+            actions:user.isBlocked ?'Unblock' :'Block',
+            color:user.isBlocked?'green':'red'
           }))
           this.userData = usertype
         },

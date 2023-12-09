@@ -61,6 +61,9 @@ getSingleBooking(bookingId:string):Observable<iTurfData>{
 cancelBooking(id:string){
     return this.http.post(`${this.adminUrl.AdminAPIEndPoint}/cancel-booking`,{id})
 }
+getWallet(){
+    return this.http.get(`${this.adminUrl.AdminAPIEndPoint}/admin-wallet`)
+}
 logout(){
     localStorage.removeItem('AdminToken');
     this.router.navigate(['admin/login']);

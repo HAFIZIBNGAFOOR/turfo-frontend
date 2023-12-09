@@ -38,11 +38,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-
+import { MatMenuModule } from '@angular/material/menu';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 import { AdminService } from './admin-service/admin-service.service';
 import { TurfManagementComponent } from './components/admin-dashboard/turf-management/turf-management.component';
 import { RouterModule } from '@angular/router';
+import { WalletManagementComponent } from './components/admin-dashboard/wallet-management/wallet-management.component';
 
 
 
@@ -67,7 +69,8 @@ import { RouterModule } from '@angular/router';
     SportsManagementComponent,
     BookingsManagementComponent,
     SingleBookingDetailsComponent,
-    TurfManagementComponent
+    TurfManagementComponent,
+    WalletManagementComponent
   ],
   imports: [
     // BrowserModule,
@@ -88,6 +91,8 @@ import { RouterModule } from '@angular/router';
     RouterModule,
     // BrowserAnimationsModule,
     MatSidenavModule,
+    MatMenuModule,
+    MatExpansionModule,
     MatListModule,
     MatDialogModule,
     MatSnackBarModule,

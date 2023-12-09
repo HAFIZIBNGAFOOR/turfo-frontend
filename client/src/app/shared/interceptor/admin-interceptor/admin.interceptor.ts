@@ -3,11 +3,14 @@ import {
   HttpRequest,
   HttpHandler,
   HttpEvent,
-  HttpInterceptor
+  HttpInterceptor,
+  HttpResponse,
+  HttpErrorResponse
 } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 import { AdminService } from '../../../admin/admin-service/admin-service.service';
 import { Constants } from '../../../config/constants';
+import * as alertify from 'alertifyjs'
 
 
 @Injectable()
@@ -25,11 +28,24 @@ export class AdminInterceptor implements HttpInterceptor {
             Authorization:`Bearer ${token}`
           }
         })
-        return next.handle(clonedReq)
+        return next.handle(clonedReq).pipe(
+          tap({
+            next:(event)=>{
+              if(event instanceof HttpResponse){
+                
+              }
+            },
+            error:(error:HttpErrorResponse)=>{
+              if(error.status==500 || error.status==404){
+                alertify.error(`Something went wrong!
+                  Please try again  ${error.status}`)
+              }
+            }
+          
+        })
+        )
       }
     }
-   
-    
     return next.handle(request);
   }
 }

@@ -30,7 +30,6 @@ export class TurfManagementComponent {
   ngOnInit(): void {
     this.adminService.getTurfLists().subscribe({
       next:(res:any)=>{
-        console.log(res);
         this.turfData = res.turfs.map((turf:iTurfData)=>({
           turfName:turf.turfName,
           turfPrice:turf.turfPrice,
@@ -38,15 +37,15 @@ export class TurfManagementComponent {
           sportsType:turf.sportsType,
           status:turf.status,
           actions:turf.status==='active'? 'Block':'UnBlock',
-          _id:turf._id,
+          turfID:turf._id,
           color:turf.status==='active'? 'red':'green'
         }));
       }
     })
   }
-  getAction(event:iTurfData){
+  getAction(event:string){
     console.log(event,' this is event');
-     this.adminService.blockOrunblockTurf(event._id).subscribe({
+     this.adminService.blockOrunblockTurf(event).subscribe({
       next:(res:any)=>{
         this.turfData = res.turfs.map((turf:iTurfData)=>({
           turfName:turf.turfName,
@@ -55,7 +54,7 @@ export class TurfManagementComponent {
           sportsType:turf.sportsType,
           status:turf.status,
           actions:turf.status==='active'? 'Block':'UnBlock',
-          _id:turf._id,
+          turfID:turf._id,
           color:turf.status==='active'? 'red':'green'
         }))
       },

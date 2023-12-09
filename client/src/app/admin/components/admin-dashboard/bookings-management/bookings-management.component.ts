@@ -38,7 +38,7 @@ export class BookingsManagementComponent {
             turfName:booking.turf.turfName,
             bookingStatus:booking.bookingStatus,
             price:booking.totalCost,
-            _id:booking._id,
+            turfID:booking._id,
             actions:'View',
             color:'green'
         }))
@@ -46,8 +46,8 @@ export class BookingsManagementComponent {
       }
     })
   }
-  getAction(event:iBookingType){
+  getAction(event:any){
     console.log(event);
-    this.router.navigate([`admin/booking-details/${event._id}`])
+    this.router.navigate([`admin/booking-details/${event}`])
   }
 }

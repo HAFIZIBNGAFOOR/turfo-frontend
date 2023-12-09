@@ -36,7 +36,6 @@ export class SingleBookingDetailsComponent {
   cancelDiolog(){
     alertify.confirm("Cancel Booking","Are you sure ?",()=>{
         this.cancelBooking()
-        alertify.success(' Booking Cancelled  ' )
     },()=>{ 
       alertify.error('cancelled')
     }
@@ -47,7 +46,7 @@ export class SingleBookingDetailsComponent {
       next:(res:any)=>{
         console.log(res,' this is response ');
         this.bookingDetails = res.bookings as iBooking
-        
+        alertify.success(' Booking Cancelled  ')
       }
     })
   }

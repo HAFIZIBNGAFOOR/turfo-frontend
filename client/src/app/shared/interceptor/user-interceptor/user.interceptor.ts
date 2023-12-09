@@ -41,6 +41,11 @@ export class InterceptorInterceptor implements HttpInterceptor {
                 alertify.error(`Something went wrong!
                   Please try again  ${error.status}`)
               }
+              if(error.status ==403){
+                alertify.set('notifier','position','top-center')
+                alertify.error(`Violation of Terms 
+                 User is Blocked by Admin `)
+              }
             }
           
         })

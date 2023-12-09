@@ -36,7 +36,7 @@ export class TurfAdminManagementComponent {
           userName :user.turfAdminName,
           email:user.email,
           phone:user.phone,
-          id:user._id,
+          turfID:user._id,
           isVerified:user.isVerified ? 'Verified': 'Verify',
           actions:'View',
           color:'primary'
@@ -52,8 +52,8 @@ export class TurfAdminManagementComponent {
   }
   
 getTableAction(event:any){
-  console.log(event.id,' this is event');
-  this.turfId = event.id
+  console.log(event,' this is event');
+  this.turfId = event
   this.router.navigate(['admin/turf-details',this.turfId])
 }
 

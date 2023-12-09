@@ -11,6 +11,7 @@ import { TurfDetailsComponent } from './components/admin-dashboard/turf-admin-ma
 import { BookingsManagementComponent } from './components/admin-dashboard/bookings-management/bookings-management.component';
 import { SingleBookingDetailsComponent } from './components/admin-dashboard/bookings-management/single-booking-details/single-booking-details.component';
 import { TurfManagementComponent } from './components/admin-dashboard/turf-management/turf-management.component';
+import { WalletManagementComponent } from './components/admin-dashboard/wallet-management/wallet-management.component';
 
 const routes: Routes = [
   {path:"",component:AdminDashboardComponent,canActivate:[AdminGuardService],
@@ -22,6 +23,7 @@ const routes: Routes = [
     {path:'turf-management',component:TurfManagementComponent},
     {path:'sports-Management',component:SportsManagementComponent},
     {path:'booking-Management',component:BookingsManagementComponent},
+    {path:'wallet-Management',component:WalletManagementComponent},
     {path:'booking-details/:bookingId',component:SingleBookingDetailsComponent},
    ]
   },

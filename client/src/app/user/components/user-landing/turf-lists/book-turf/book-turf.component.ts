@@ -206,12 +206,7 @@ export class BookTurfComponent {
         this.router.navigate(['/booking-success'])
       },
       error: (err: any) => {
-        console.log(err, ' this is error in paymnet using wallet');
-
         if (err.status == 402) {
-          alertify.set('notifier', 'position', 'bottom-center');
-          alertify.error('Not enough wallet amount ')
-        } else{
           alertify.set('notifier', 'position', 'bottom-center');
           alertify.error('Not enough wallet amount ')
         }
