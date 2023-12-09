@@ -45,3 +45,7 @@ mat-sidenav-container{
   justify-content: center;
   align-items: center;
 }
+.width{
+  width: 80vw;
+  height: 70vw;
+}

@@ -47,7 +47,10 @@
       </mat-sidenav>
     <!-- <mat-grid-list  class="mat-grid-list" cols="2"  > -->
       <ng-container *ngIf="noTurf; else elseTemplate" >
-        <h2 class="text-center text-danger mt-3">No turf found</h2>
+        <div class="width">
+          <h2 class="text-center text-danger mt-3">No turf found</h2>
+
+        </div>
       </ng-container>
       <ng-template #elseTemplate>
           <div class="row">
