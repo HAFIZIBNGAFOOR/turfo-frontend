@@ -1,7 +1,10 @@
 <app-navbar [isAdmin]="false" [isLoggedIn]="isLoggedIn" (isLogout)="logout($event)">
-        <router-outlet></router-outlet>
+        <div class="width background"  >
+                <router-outlet></router-outlet>
+
+        </div>
 </app-navbar>
-<div class="widht"></div>
+<!-- <div ></div> -->
 <app-footer></app-footer>
 
 

@@ -1,6 +1,9 @@
 .filter {
     display: block;
-    margin: 1rem;
+    padding: 2px;
+    background-color: #C9DDD1;
+    height: max-content;
+    width:max-content;
   }
   .card-container {
     display:flex;
@@ -13,9 +16,8 @@
     transform: scale(1.05);
 } */
 
-
 mat-sidenav{
-  height: fit-content;
+  height: max-content;
 }
 
 .mat-grid-tile{
@@ -48,4 +50,8 @@ mat-sidenav-container{
 .width{
   width: 80vw;
   height: 70vw;
+}
+.background{
+  padding: 2%;
+  background-color: #C9DDD1;
 }

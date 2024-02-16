@@ -13,8 +13,8 @@
                                 <mat-accordion>
                                     <mat-expansion-panel hideToggle>
                                     <mat-expansion-panel-header>
-                                        <mat-panel-title>
-                                            {{wallet.transaction}}ed
+                                        <mat-panel-title class="text-success" [ngClass]="{'text-success':wallet.transation=='credit','text-danger':wallet.transation=='debit' }">
+                                            {{wallet.transaction |uppercase}}ED
                                         </mat-panel-title>
                                         <mat-panel-description>
                                         {{wallet.date | date:'dd-MM-yyyy'}}
@@ -29,8 +29,14 @@
                             </div>
                         </div>
                     </div>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="text-center" *ngIf="!isInitialized">
+                            <mat-spinner color="primary"></mat-spinner>
+                        </div>
+                    </div>
+
                     <div *ngIf="!walletDetails || walletDetails.length<=0">
-                     No Wallet history
+                        No Wallet history
                      </div>
                 </div>
 

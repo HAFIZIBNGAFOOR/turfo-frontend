@@ -1,6 +1,6 @@
-<mat-sidenav-container class="sidenav-container ">
+<mat-sidenav-container class="sidenav-container background">
     <mat-sidenav mode="side" opened class="sidenav">
-      <mat-nav-list class="sidenav">
+      <mat-nav-list class="sidenav background ">
         <mat-list-item class="nav-link"  routerLinkActive="active" routerLink="user-details">
           <div class="center-button">
             <!-- <button > Profile</button> -->
@@ -22,7 +22,9 @@
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
+      <div class="background">
         <router-outlet ></router-outlet>
+      </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
 

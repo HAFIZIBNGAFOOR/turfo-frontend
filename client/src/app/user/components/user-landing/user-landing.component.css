@@ -18,7 +18,9 @@
 .sidenav-container {
   height: 100%;
 }
-.widht{
-  width: 70vw;
-  height: 50vw;
+.width{
+  width: 100vw;
+  min-height: 100vh;
+  max-height: fit-content;
+
 }

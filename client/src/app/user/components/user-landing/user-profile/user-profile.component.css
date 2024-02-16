@@ -1,16 +1,3 @@
-/* .example-container {
-    width: 100%;
-    height: auto;
-    border: 1px solid #2FB563;
-  }
-  
-  mat-drawer-content {
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  } */
-
   .mat-button{
      color: white;
   }
@@ -43,7 +30,6 @@
     margin-top: 1rem;
     padding-bottom: 1rem;
     width: 100%;
-    border-bottom:2px solid #000000;
   }
   .nav-link {
     color: #2FB563;
@@ -53,8 +39,8 @@
     padding-bottom: 1rem;
     display: flex;
     justify-content: center;
+    height:15% ;
     align-items: center;
-    border-bottom:solid #000000 3px;
     box-shadow:  0 0 10px #2fb56380;
 
   }
@@ -81,7 +67,6 @@
     padding: 0% !important;
     height: fit-content;
     box-shadow:  0 0 10px rgba(47, 181, 99, 0.5);
-
   }
   .center-button {
     display: flex;
@@ -94,4 +79,10 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
     border-bottom: solid black 3px;
+}
+
+.background{
+  background-color:#C9DDD1 ;
+  max-height: fit-content;
+  min-height: 100vh;
 }

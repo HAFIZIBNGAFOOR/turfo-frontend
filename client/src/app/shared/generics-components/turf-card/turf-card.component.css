@@ -5,6 +5,8 @@
   box-shadow: 0 4px 4px rgba(8, 224, 87, 0.1);
   transition: transform 0.3s;
   align-items: center;
+  padding:2%;
+  border-radius: 5%;
 }
 
 .card-image-container {

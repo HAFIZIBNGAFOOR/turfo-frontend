@@ -1,9 +1,9 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-turf-card',
   templateUrl: './turf-card.component.html',
-  styleUrls: ['./turf-card.component.css']
+  styleUrls: ['./turf-card.component.css'],
 })
 export class TurfCardComponent {
   @Input() turfData!:any;
