@@ -41,10 +41,6 @@ const routes: Routes = [
     ],
     
   },
-  
-
-
-  // {path:'book-turf'}
 ];
 
 @NgModule({
